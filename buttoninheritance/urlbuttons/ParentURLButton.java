@@ -9,7 +9,7 @@ import java.net.URISyntaxException;
 import javax.swing.JButton;
 
 // Parent class: URL Buttons
-public class ParentURLButton implements ActionListener {
+public class ParentURLButton extends JButton implements ActionListener {
     protected String url;
 
     public ParentURLButton(String text, String url, Color colorSomething) {
