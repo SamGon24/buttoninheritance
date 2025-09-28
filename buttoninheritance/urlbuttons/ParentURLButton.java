@@ -14,6 +14,7 @@ import javax.swing.JButton;
 public class ParentURLButton extends JButton implements ActionListener {
     protected String url;
 
+    public ParentURLButton(String text, String url){} // just to check if this fixes the problem 
 
     public ParentURLButton(String text, String url, Color colorSomething) {
         super(text);
