@@ -1,6 +1,8 @@
 package buttoninheritance.urlbuttons;
 
-import java.awt.*;
+import java.awt.Color; 
+import java.awt.Dimension;
+import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -11,6 +13,7 @@ import javax.swing.JButton;
 // Parent class: URL Buttons
 public class ParentURLButton extends JButton implements ActionListener {
     protected String url;
+
 
     public ParentURLButton(String text, String url, Color colorSomething) {
         super(text);
