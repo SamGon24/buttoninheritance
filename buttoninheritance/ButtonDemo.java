@@ -3,6 +3,8 @@ package buttoninheritance;
 import buttoninheritance.urlbuttons.OCPButton;
 import buttoninheritance.urlbuttons.ParentURLButton;
 import buttoninheritance.urlbuttons.SRPButton;
+import buttoninheritance.drawingbuttons.ParentDrawingButton;
+import buttoninheritance.drawingbuttons.CosineDrawingButton;
 import java.awt.*;
 import javax.swing.*;
 
