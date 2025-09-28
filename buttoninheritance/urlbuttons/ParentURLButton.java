@@ -14,7 +14,9 @@ import javax.swing.JButton;
 public class ParentURLButton extends JButton implements ActionListener {
     protected String url;
 
-    public ParentURLButton(String text, String url){} // just to check if this fixes the problem 
+    public ParentURLButton(String text, String url) {
+        this(text, url, null); // Call the other constructor with a null color to avoid duplication (might change later not sure)
+    }
 
     public ParentURLButton(String text, String url, Color colorSomething) {
         super(text);
