@@ -4,7 +4,7 @@ package buttoninheritance.urlbuttons;
 public class OCPButton extends ParentURLButton {
  
     public OCPButton(String text, String url) {
-        super(text, url);
+        super(text, url); // prueba rapida de parametros
     }
 }
 
