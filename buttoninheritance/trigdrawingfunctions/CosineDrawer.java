@@ -34,14 +34,17 @@ public class CosineDrawer extends JPanel implements ActionListener {
         if (e.getSource() == timer) {
             // Increment the angle
             angle += 0.01;                   // Increment in 1/100th of a radian
-            int x = (int) (angle * 100);     // Scale the x-coordinate for visibility
-            int y = (int) ((Math.cos(angle) + 1) * 100); // Adjusted & scaled
+            int x = (int) (angle * getWidth() / (2*Math.PI));   //dependent to width from 0 to 2PI for cosine funct
+            int centerY= getHeight() / 2; //centering it vertically to create cosine funct
+            int amplitude = (int) (getHeight() * 0.4); //0.4 test point to see how it looks and doesnt reach frames
+            int y = centerY - (int) (amplitude * Math.cos(angle));
+
 
             points.add(new Point(x, y));     // Add the new point
             repaint();
 
             // Stop after ~1 periodo o al salir del panel
-            if (angle > 2 * Math.PI || x > getWidth()) {
+            if (angle >=2 * Math.PI) { //testing if it prints full period (might change)
                 timer.stop();
             }
         }
