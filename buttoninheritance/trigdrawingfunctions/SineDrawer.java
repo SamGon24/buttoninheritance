@@ -1,5 +1,6 @@
 package buttoninheritance.trigdrawingfunctions;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
@@ -17,6 +18,7 @@ public class SineDrawer extends JPanel implements ActionListener {
     public SineDrawer() {
         points = new ArrayList<>();
         // Set up the timer to call actionPerformed method every 10 milliseconds
+        setBackground(Color.CYAN);
         timer = new Timer(10, this);
         timer.start();
     }
@@ -24,6 +26,7 @@ public class SineDrawer extends JPanel implements ActionListener {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        g.setColor(Color.PINK);
         for (Point point : points) {
             g.fillOval(point.x, point.y, 4, 4); // Draw each point as a small circle
         }
