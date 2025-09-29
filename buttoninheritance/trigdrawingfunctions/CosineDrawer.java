@@ -1,5 +1,6 @@
 package buttoninheritance.trigdrawingfunctions;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
@@ -24,6 +25,7 @@ public class CosineDrawer extends JPanel implements ActionListener {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        g.setColor(Color.GREEN); //changed dots to green for originality and why not ;)
         for (Point point : points) {
             g.fillOval(point.x, point.y, 4, 4); // Draw each point as a small circle
         }
