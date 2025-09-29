@@ -36,7 +36,7 @@ public class CosineDrawer extends JPanel implements ActionListener {
             angle += 0.01;                   // Increment in 1/100th of a radian
             int x = (int) (angle * getWidth() / (2*Math.PI));   //dependent to width from 0 to 2PI for cosine funct
             int centerY= getHeight() / 2; //centering it vertically to create cosine funct
-            int amplitude = (int) (getHeight() * 0.4); //0.4 test point to see how it looks and doesnt reach frames
+            int amplitude = (int) (getHeight() * 0.5); //0.5 test point to see how it looks, 0.4 doesnt reach frames
             int y = centerY - (int) (amplitude * Math.cos(angle));
 
 
