@@ -12,6 +12,6 @@ public class SineDrawingButton extends ParentDrawingButton {
     @Override
     protected void plotter(JFrame plotterFrame) {
         plotterFrame.setTitle("Sine Plotter"); 
-        plotterFrame.add(new SineDrawerDrawer());    
+        plotterFrame.add(new SineDrawer());    
     }    
 }
