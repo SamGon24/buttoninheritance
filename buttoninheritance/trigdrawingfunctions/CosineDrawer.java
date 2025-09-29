@@ -18,6 +18,7 @@ public class CosineDrawer extends JPanel implements ActionListener {
     public CosineDrawer() {
         points = new ArrayList<>();
         // Set up the timer to call actionPerformed method every 10 milliseconds
+        setBackground(Color.BLACK); //changing background color to black so it looks cool
         timer = new Timer(10, this);
         timer.start();
     }
