@@ -10,15 +10,15 @@ import java.util.List;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class CosineDrawer extends JPanel implements ActionListener {
+public class SineDrawer extends JPanel implements ActionListener {
     private final Timer timer;           // Timer to update the "x" coordinate
     private double angle = 0.0;          // Start angle
     private final List<Point> points;    // To store points of the cosine curve
 
-    public CosineDrawer() {
+    public SineDrawer() {
         points = new ArrayList<>();
         // Set up the timer to call actionPerformed method every 10 milliseconds
-        setBackground(Color.BLACK); //changing background color to black so it looks cool
+        setBackground(Color.CYAN);
         timer = new Timer(10, this);
         timer.start();
     }
@@ -26,7 +26,7 @@ public class CosineDrawer extends JPanel implements ActionListener {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.setColor(Color.GREEN); //changed dots to green for originality and why not ;)
+        g.setColor(Color.PINK);
         for (Point point : points) {
             g.fillOval(point.x, point.y, 4, 4); // Draw each point as a small circle
         }
@@ -37,17 +37,14 @@ public class CosineDrawer extends JPanel implements ActionListener {
         if (e.getSource() == timer) {
             // Increment the angle
             angle += 0.01;                   // Increment in 1/100th of a radian
-            int x = (int) (angle * getWidth() / (2*Math.PI));   //dependent to width from 0 to 2PI for cosine funct
-            int centerY= getHeight() / 2; //centering it vertically to create cosine funct
-            int amplitude = (int) (getHeight() * 0.5); //0.5 test point to see how it looks, 0.4 doesnt reach frames
-            int y = centerY - (int) (amplitude * Math.cos(angle));
-
+            int x = (int) (angle * 100);     // Scale the x-coordinate for visibility
+            int y = (int) ((Math.cos(angle) + 1) * 100); // Adjusted & scaled
 
             points.add(new Point(x, y));     // Add the new point
             repaint();
 
             // Stop after ~1 periodo o al salir del panel
-            if (angle >=2 * Math.PI) { //testing if it prints full period (might change)
+            if (angle > 2 * Math.PI || x > getWidth()) {
                 timer.stop();
             }
         }
