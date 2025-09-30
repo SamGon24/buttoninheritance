@@ -29,15 +29,15 @@ public class ParentURLButton extends JButton implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) { // this should be out of here
         openBrowser(url);
     }
 
-    protected void reNameButton(String name) {
+    protected void reNameButton(String name) { // this should be out of here
         this.setText(name);
     }
 
-    private void openBrowser(String url) {
+    private void openBrowser(String url) { // this should be out of here
         if (Desktop.isDesktopSupported()) {
             try {
                 Desktop.getDesktop().browse(new URI(url));
