@@ -27,7 +27,7 @@ public class ParentURLButton extends JButton implements ActionListener {
         addActionListener(this);
         setPreferredSize(new Dimension(150, 100));
     }
-
+/* 
     @Override
     public void actionPerformed(ActionEvent e) { // this should be out of here
         openBrowser(url);
@@ -48,5 +48,6 @@ public class ParentURLButton extends JButton implements ActionListener {
             System.out.println("Desktop is not supported on this platform.");
         }
     }
+        */
 
 }
