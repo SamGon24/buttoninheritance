@@ -26,23 +26,5 @@ public class ParentURLButton extends JButton {
         protected void reNameButton(String name) { 
         this.setText(name);
     }
-/* 
-    @Override
-    public void actionPerformed(ActionEvent e) { // this should be out of here
-        openBrowser(url);
-    }
-
-    private void openBrowser(String url) { // this should be out of here
-        if (Desktop.isDesktopSupported()) {
-            try {
-                Desktop.getDesktop().browse(new URI(url));
-            } catch (IOException | URISyntaxException ex) {
-                ex.printStackTrace(System.out);
-            }
-        } else {
-            System.out.println("Desktop is not supported on this platform.");
-        }
-    }
-        */
 
 }
