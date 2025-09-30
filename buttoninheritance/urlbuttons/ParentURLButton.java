@@ -10,6 +10,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import javax.swing.JButton;
 
+// New objective now: refactor the ParenURLButton class to only handle UI stuff,
+// not the URL opening logic. Openbrowser logic should be in another class (SRP)
+
 // Parent class: URL Buttons
 public class ParentURLButton extends JButton implements ActionListener {
     protected String url;
