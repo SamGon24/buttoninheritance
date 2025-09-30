@@ -2,19 +2,13 @@ package buttoninheritance.urlbuttons;
 
 import java.awt.Color; 
 import java.awt.Dimension;
-import java.awt.Desktop;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import javax.swing.JButton;
 
 // New objective now: refactor the ParenURLButton class to only handle UI stuff,
 // not the URL opening logic. Openbrowser logic should be in another class (SRP)
 
 // Parent class: URL Buttons
-public class ParentURLButton extends JButton implements ActionListener {
+public class ParentURLButton extends JButton {
     protected String url;
 
     public ParentURLButton(String text, String url) {
@@ -24,8 +18,13 @@ public class ParentURLButton extends JButton implements ActionListener {
     public ParentURLButton(String text, String url, Color colorSomething) {
         super(text);
         this.url = url;
-        addActionListener(this);
         setPreferredSize(new Dimension(150, 100));
+
+        
+    }
+
+        protected void reNameButton(String name) { // this should be out of here
+        this.setText(name);
     }
 /* 
     @Override
@@ -33,9 +32,7 @@ public class ParentURLButton extends JButton implements ActionListener {
         openBrowser(url);
     }
 
-    protected void reNameButton(String name) { // this should be out of here
-        this.setText(name);
-    }
+
 
     private void openBrowser(String url) { // this should be out of here
         if (Desktop.isDesktopSupported()) {
