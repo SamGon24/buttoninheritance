@@ -13,17 +13,17 @@ public class ParentURLButton extends JButton {
 
     public ParentURLButton(String text, String url) {
         this(text, url, null); // Call the other constructor with a null color to avoid duplication (might change later not sure)
+
     }
 
     public ParentURLButton(String text, String url, Color colorSomething) {
         super(text);
         this.url = url;
+        setActionCommand(this.url);  // setting the action command to the url for the ActionURL class to use
         setPreferredSize(new Dimension(150, 100));
 
-        
     }
-
-        protected void reNameButton(String name) { // this should be out of here
+        protected void reNameButton(String name) { 
         this.setText(name);
     }
 /* 
@@ -31,8 +31,6 @@ public class ParentURLButton extends JButton {
     public void actionPerformed(ActionEvent e) { // this should be out of here
         openBrowser(url);
     }
-
-
 
     private void openBrowser(String url) { // this should be out of here
         if (Desktop.isDesktopSupported()) {
