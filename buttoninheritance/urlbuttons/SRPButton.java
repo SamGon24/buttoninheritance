@@ -6,7 +6,7 @@ import java.awt.Color;
 public class SRPButton extends ParentURLButton {
    
     public SRPButton(String text, String url) {
-        super(text, url, new Color(128, 128, 0));
+        super(text, url,Color.BLACK);
     }
 }
 

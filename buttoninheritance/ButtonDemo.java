@@ -19,7 +19,9 @@ public class ButtonDemo extends JFrame {
 
         // Create buttons
         ParentURLButton txStateURLButton = new ParentURLButton("TxState", "https://www.txst.edu/",new Color(102, 0, 0));
+        txStateURLButton.setForeground(Color.WHITE); //change letters to color white for better view
         SRPButton srpButton = new SRPButton("SRP", "https://www.youtube.com/watch?v=MPp4A4F6rQI&t=359s");
+        srpButton.setForeground(Color.WHITE); 
         OCPButton ocpButton = new OCPButton("OCP", "https://www.youtube.com/watch?v=j9G-1TF9KkQ");
         ParentDrawingButton drawingButton = new CosineDrawingButton("Cosine Plotter");
         ParentDrawingButton drawingButton1 = new SineDrawingButton("Sine Plotter");
