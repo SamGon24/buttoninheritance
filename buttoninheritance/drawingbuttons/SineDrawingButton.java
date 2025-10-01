@@ -1,12 +1,14 @@
 package buttoninheritance.drawingbuttons;
 
 import buttoninheritance.trigdrawingfunctions.SineDrawer;
+import java.awt.Color;
 import javax.swing.JFrame;
+
 
 public class SineDrawingButton extends ParentDrawingButton {
 
     public SineDrawingButton(String text) {
-        super(text);
+        super(text,new Color(0, 128, 128));
     }
 
     @Override

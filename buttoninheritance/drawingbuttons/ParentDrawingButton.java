@@ -1,13 +1,15 @@
 package buttoninheritance.drawingbuttons;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class ParentDrawingButton extends JButton implements ActionListener {
 
-    public ParentDrawingButton(String text) {
+    public ParentDrawingButton(String text, Color bgColor) {
         super(text);
+        setBackground(bgColor);
         addActionListener(this);
     }
 
