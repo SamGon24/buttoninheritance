@@ -1,9 +1,10 @@
 package buttoninheritance.drawingbuttons;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
+import javax.swing.*; //added so i can use dimension for fixed size and all buttons have same size
 
 public class ParentDrawingButton extends JButton implements ActionListener {
 
@@ -11,6 +12,7 @@ public class ParentDrawingButton extends JButton implements ActionListener {
         super(text);
         setBackground(bgColor);
         addActionListener(this);
+        setPreferredSize(new Dimension(150, 100));
     }
 
     // Method to be overridden by subclasses that will specify what drawing function
