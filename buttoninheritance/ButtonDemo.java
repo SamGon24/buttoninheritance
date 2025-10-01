@@ -3,6 +3,7 @@ package buttoninheritance;
 import buttoninheritance.drawingbuttons.CosineDrawingButton;
 import buttoninheritance.drawingbuttons.ParentDrawingButton;
 import buttoninheritance.drawingbuttons.SineDrawingButton;
+import buttoninheritance.urlbuttons.MyButtonURL;
 import buttoninheritance.urlbuttons.OCPButton;
 import buttoninheritance.urlbuttons.ParentURLButton;
 import buttoninheritance.urlbuttons.SRPButton;
@@ -23,6 +24,7 @@ public class ButtonDemo extends JFrame {
         SRPButton srpButton = new SRPButton("SRP", "https://www.youtube.com/watch?v=MPp4A4F6rQI&t=359s");
         srpButton.setForeground(Color.WHITE); 
         OCPButton ocpButton = new OCPButton("OCP", "https://www.youtube.com/watch?v=j9G-1TF9KkQ");
+        MyButtonURL mybuttonurl = new MyButtonURL("YOUTUBE", "https://www.youtube.com/watch?v=l91QeZ7AUag");
         ParentDrawingButton drawingButton = new CosineDrawingButton("Cosine Plotter");
         ParentDrawingButton drawingButton1 = new SineDrawingButton("Sine Plotter");
 
@@ -32,6 +34,7 @@ public class ButtonDemo extends JFrame {
         add(ocpButton);
         add(drawingButton);
         add(drawingButton1);
+        add(mybuttonurl);
 
     }
 
