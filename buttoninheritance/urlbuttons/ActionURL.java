@@ -1,6 +1,8 @@
 // new file to move the url handlings out of ParentURLButton
-
+// handles the action events for the URL buttons, following SRP
+// will also have a pop-up message if the URL cannot be opened
 // packages needed to implement everything (just adding default stuff)
+
 package buttoninheritance.urlbuttons;
 
 import java.awt.event.ActionEvent;
