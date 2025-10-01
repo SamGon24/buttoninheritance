@@ -25,6 +25,7 @@ public class ButtonDemo extends JFrame {
         srpButton.setForeground(Color.WHITE); 
         OCPButton ocpButton = new OCPButton("OCP", "https://www.youtube.com/watch?v=j9G-1TF9KkQ");
         MyButtonURL mybuttonurl = new MyButtonURL("YOUTUBE", "https://www.youtube.com/watch?v=l91QeZ7AUag");
+        mybuttonurl.setForeground(Color.WHITE);
         ParentDrawingButton drawingButton = new CosineDrawingButton("Cosine Plotter");
         ParentDrawingButton drawingButton1 = new SineDrawingButton("Sine Plotter");
 
