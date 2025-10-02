@@ -22,7 +22,7 @@ public class ActionURL implements ActionListener {
         if (Desktop.isDesktopSupported()) {
             try {
                 Desktop.getDesktop().browse(new URI(url));
-                // block of code to show the pop-up message if the URL is opened satisfactorily
+            JOptionPane.showMessageDialog(null, "The url opened succesfully"); // pop up message to confirm that the url works, testing rn
             } catch (Exception ex) {
                 ex.printStackTrace();
                 // same thing but this time with a pop-message that says it cannot be opened
