@@ -22,10 +22,10 @@ public class ActionURL implements ActionListener {
         if (Desktop.isDesktopSupported()) {
             try {
                 Desktop.getDesktop().browse(new URI(url));
-            JOptionPane.showMessageDialog(null, "The url opened succesfully"); // pop up message to confirm that the url works, testing rn
+            JOptionPane.showMessageDialog(null, "The url opened succesfully!", "Pop-Up", JOptionPane.PLAIN_MESSAGE); // Improved this call, might add colors later
             } catch (Exception ex) {
                 ex.printStackTrace();
-                // same thing but this time with a pop-message that says it cannot be opened
+            JOptionPane.showMessageDialog(null, "Failed to open: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE); // This is the actual pop-up message from the rubric
             }
         } else {
             System.out.println("Desktop is not supported on this platform.");
