@@ -1,13 +1,7 @@
 package buttoninheritance.urlbuttons;
 
 import java.awt.Color;
-import java.awt.Desktop;
 import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import javax.swing.JButton;
 
 // New objective now: refactor the ParenURLButton class to only handle UI stuff,
@@ -30,7 +24,6 @@ public class ParentURLButton extends JButton {
             setBackground(bgColor);
         }
 
-        addActionListener(this);
         setActionCommand(this.url);  // setting the action command to the url for the ActionURL class to use
         setPreferredSize(new Dimension(150, 100));
 

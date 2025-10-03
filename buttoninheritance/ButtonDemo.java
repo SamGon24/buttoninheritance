@@ -3,9 +3,9 @@ package buttoninheritance;
 import buttoninheritance.drawingbuttons.CosineDrawingButton;
 import buttoninheritance.drawingbuttons.ParentDrawingButton;
 import buttoninheritance.drawingbuttons.SineDrawingButton;
+import buttoninheritance.urlbuttons.ActionURL;
 import buttoninheritance.urlbuttons.MyButtonURL;
-import buttoninheritance.urlbuttons.OCPButton;
-import buttoninheritance.urlbuttons.ActionURL; // new import to use the actionurl class 
+import buttoninheritance.urlbuttons.OCPButton; // new import to use the actionurl class 
 import buttoninheritance.urlbuttons.ParentURLButton;
 import buttoninheritance.urlbuttons.SRPButton;
 import java.awt.*;
