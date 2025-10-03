@@ -5,10 +5,13 @@ import buttoninheritance.drawingbuttons.ParentDrawingButton;
 import buttoninheritance.drawingbuttons.SineDrawingButton;
 import buttoninheritance.urlbuttons.MyButtonURL;
 import buttoninheritance.urlbuttons.OCPButton;
+import buttoninheritance.urlbuttons.ActionURL; // new import to use the actionurl class 
 import buttoninheritance.urlbuttons.ParentURLButton;
 import buttoninheritance.urlbuttons.SRPButton;
 import java.awt.*;
 import javax.swing.*;
+
+
 
 // Main class to demonstrate the UI
 public class ButtonDemo extends JFrame {
@@ -29,6 +32,11 @@ public class ButtonDemo extends JFrame {
         ParentDrawingButton drawingButton = new CosineDrawingButton("Cosine Plotter");
         ParentDrawingButton drawingButton1 = new SineDrawingButton("Sine Plotter");
 
+        ActionURL open = new ActionURL(); // Now that we moved things around, boom: instances now correspond to ActionURL.
+        txStateURLButton.addActionListener(open);
+        srpButton.addActionListener(open);
+        ocpButton.addActionListener(open);
+
         // Add buttons to the frame
         add(txStateURLButton);
         add(srpButton);
@@ -36,6 +44,13 @@ public class ButtonDemo extends JFrame {
         add(drawingButton);
         add(drawingButton1);
         add(mybuttonurl);
+
+        // Add buttons to the frame
+        add(txStateURLButton);
+        add(srpButton);
+        add(ocpButton);
+        add(drawingButton);
+        add(drawingButton1);
 
     }
 
